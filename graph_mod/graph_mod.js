@@ -50,10 +50,16 @@ function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
-var canvas = document.createElement("center");
-var graph = document.createElement("canvas");
-graph.id = "myChart"; graph.width = 600; graph.height = 300;
-canvas.appendChild(graph);
+var canvas  = document.createElement("center");
+var url     = document.createElement("a");
+var graph   = document.createElement("canvas");
+graph.id    = "myChart"; graph.width = 600; graph.height = 300;
+url.onclick =
+ function () {
+   var dataUrl = graph.toDataURL("image/png");
+   window.open(dataUrl, "toDataURL() image"); }
+url.appendChild(graph);
+canvas.appendChild(url);
 
 var target = document.getElementById('central-text')
                      .getElementsByTagName("h4")[5];
@@ -88,3 +94,4 @@ var myNewChart = new Chart(ctx).Line(data,{
     scaleStartValue: 0,
     bezierCurve : false,
 });
+
