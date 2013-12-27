@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           Kraland - Graph Mod
 // @namespace      none
-// @require        https://raw.github.com/nnnick/Chart.js/master/Chart.js
+// @require        http://danproposkanovovski.free.fr/kraland/graph_mod/Chart.min.js
 // @include        http://www.kraland.org/main.php?p=6_1*
 // ==/UserScript==
 
